@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: farmacia
+    env: php
+    plan: free
+    buildCommand: ""
+    startCommand: ./start.sh
+    repo: https://github.com/Pinkcayy/farmacia
+    branch: main
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        generateValue: true
+      - key: DB_CONNECTION
+        value: sqlite
