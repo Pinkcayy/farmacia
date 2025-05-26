@@ -10,7 +10,7 @@
         <h1 class="mb-4 text-center">Lista de Productos de Farmacia</h1>
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-            @foreach ($productos as $producto)
+            @foreach ($productos->take(9) as $producto)
                 <div class="col">
                     <div class="card h-100 shadow-sm">
                         <img src="{{ asset('images/' . $producto->imagen) }}" class="card-img-top" alt="{{ $producto->nombre }}">
